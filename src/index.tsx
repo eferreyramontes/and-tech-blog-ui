@@ -6,10 +6,23 @@ import App from "./App";
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+// Redux Store
+import { Provider } from 'react-redux'
+import { configureStore } from './store';
+import { loadBlog } from './store/Blog'
+
+import './index.css';
+
+const store = configureStore();
+store.dispatch(loadBlog())
+
+
 ReactDOM.render((
-  <Router>
-    <App />
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>
 ), document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

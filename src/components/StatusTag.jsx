@@ -1,7 +1,6 @@
 import React from 'react';
 
 const StatusTag = ({ status }) => {
-    console.log(`The status is: ${status}`);
     switch (status) {
         case 'IN_PROGRESS':
             return (<span className="tag is-small is-warning" style={{ marginRight: 20 }}>In Progress</span>)
