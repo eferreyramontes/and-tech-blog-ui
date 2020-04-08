@@ -5,8 +5,9 @@ import PageContent from './../components/PageContent';
 
 const BlogPost = ({ location: { state: { props } } }) => (
     <PageContent>
-        <BlogNav date={props.date} status={props.status} to="/blog" title="Back to Blog" />
-        <BlogContent {...props} />
+        <BlogContent {...props} >
+            <BlogNav date={props.date} status={props.status} to="/blog" title="Back to Blog" />
+        </BlogContent>
     </PageContent>
 )
 export default BlogPost

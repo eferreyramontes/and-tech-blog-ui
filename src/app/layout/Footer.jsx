@@ -4,11 +4,7 @@ const Footer = () => (
     <footer className="footer">
         <div className="container">
             <div className="content has-text-centered">
-                <p>
-                    Built on <strong>React</strong> with <strong>Bulma</strong> by Me! <a href="https://github.com/aaronklaser">Aaron Klaser</a>
-                    <br />
-          Copyright 2018
-        </p>
+                <p>© 2020 <a link="https://and.digital/">AND Digital</a>. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -36,7 +36,7 @@ class Header extends React.Component {
                             src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAU3AAAAJGE1MzYxNzYzLTE1NTUtNDEyYi04MzRjLTgzZjNkOGU0MGIzNg.jpg"
                             width="30px"
                             alt="" />
-                        <span>AaronKlaser.com</span>
+                        <span>AND Tech Blog</span>
                     </NavLink>
                     <button className="button navbar-burger" onClick={this.toggleNav}>
                         <span></span>
@@ -81,20 +81,19 @@ class Header extends React.Component {
                         </div>
                     </div>
                     <div className="navbar-end">
-                        <a className="navbar-item" href="https://github.com/aaronklaser">
+                        <a className="navbar-item" href="https://github.com/and-digital">
                             <span className="icon">
                                 <i className="fab fa-lg fa-github"></i>
                             </span>
                         </a>
-                        <a className="navbar-item" href="https://twitter.com/awklaser">
-                            <span className="icon has-text-info" style={{ color: '#0084FF' }}>
+                        <a className="navbar-item" href="https://twitter.com/AND_Digital">
+                            <span className="icon" style={{ color: '#0084FF' }}>
                                 <i className="fab fa-lg fa-twitter"></i>
                             </span>
                         </a>
-                        <a className="navbar-item" href="http://resume.aaronklaser.com">
-                            Resume
-              <span className="icon" style={{ color: '#0077B5', marginLeft: 5 }}>
-                                <i className="fab fa-lg fa-linkedin"></i>
+                        <a className="navbar-item" href="https://www.instagram.com/and.digital">
+                            <span className="icon" style={{ color: '#0077B5' }}>
+                                <i className="fab fa-lg fa-instagram"></i>
                             </span>
                         </a>
                     </div>

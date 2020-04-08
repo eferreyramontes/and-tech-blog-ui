@@ -1,5 +1,6 @@
 import React from 'react'
-import * as Markdown from 'react-markdown'
+import * as Markdown from 'react-markdown';
+import CodeBlock from "../../../components/CodeBlock";
 
 const BlogContent = (props) => (
     <article className="media">
@@ -17,10 +18,11 @@ const BlogContent = (props) => (
                             ? props.content.split(" ").splice(0, props.limit).join(" ").concat('...')
                             : props.content
                     }
+                    renderers={{ code: CodeBlock }}
                 />
             </div>
             {props.children}
         </div>
     </article>
 )
-export default BlogContent
+export default BlogContent;
