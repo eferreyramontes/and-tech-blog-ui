@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import moment from 'moment'
 import StatusTag from './../../../components/StatusTag';
 
-const BlogNav = ({ to, date, status }) => (
+const BlogNav = ({ to, date, status, title }) => (
     <nav className="level">
         <div className="level-left">
-            <Link className="level-item button is-small is-link is-outlined" to={to}>Back to Blog</Link>
+            <Link className="level-item button is-small is-link is-outlined" to={to}>{title}</Link>
         </div>
         <div className="level-right">
             <StatusTag status={status} />
