@@ -10,8 +10,8 @@ class Blog extends React.Component {
     render() {
         return (
             <div>
-                <PageHeader color="is-danger" title="Code Blog">
-                    Your standard <strong>JavaScript</strong> programming blog, albeit, probably not very good, but I will at least try to keep it entertaining. This blog is a chronological mix of random posts on Angular, React, Functional Programming, and my <strong>project walkthroughs</strong>.
+                <PageHeader color="is-danger" title="Java Blog">
+                    Your standard <strong>Java</strong> blog section, compilers, optimizations, frameworks and more.
                 </PageHeader>
                 {
                     this.props.blog.loading

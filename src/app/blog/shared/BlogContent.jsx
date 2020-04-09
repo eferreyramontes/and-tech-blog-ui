@@ -1,12 +1,13 @@
 import React from 'react'
 import * as Markdown from 'react-markdown';
 import CodeBlock from "../../../components/CodeBlock";
+import { FaJava } from 'react-icons/fa';
 
 const BlogContent = (props) => (
     <article className="media">
         <div className="media-left">
             <figure className="image is-64x64">
-                <img src={props.icon} alt={props.title} />
+                <FaJava size="4em" color="#FF323C" />
             </figure>
         </div>
         <div className="media-content">

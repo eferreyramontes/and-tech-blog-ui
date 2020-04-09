@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import Helmet from 'react-helmet`'
 
 import Site from './layout/Site'
 import Header from './layout/Header'
@@ -11,10 +11,10 @@ import Router from './layout/Router'
 const Layout = ({ children }) => (
     <Site>
         <Helmet
-            title="Aaron is Awesome"
+            title="AND Digital Tech blog"
             meta={[
-                { name: 'description', content: 'Aaron Klaser\'s personal wedsite, portfolio, blog, tutorials, and just cool $h!t' },
-                { name: 'keywords', content: 'resume, blog, porfolio, tutorials, aaron klaser' },
+                { name: 'description', content: 'AND Digital Tech blog to post all interesting topics related to technology.' },
+                { name: 'keywords', content: 'blog, and-digital, tutorials' },
             ]}
             script={[
                 { 'src': 'https://use.fontawesome.com/releases/v5.0.4/js/all.js' },
@@ -35,4 +35,4 @@ Layout.propTypes = {
     children: PropTypes.func,
 }
 
-export default Layout
+export default Layout;

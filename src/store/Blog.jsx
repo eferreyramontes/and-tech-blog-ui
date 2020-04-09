@@ -12,7 +12,7 @@ export function loadBlog() {
 
         return client.getEntries()
             .then(({ items }) => {
-                setTimeout(() => dispatch(actions.loadBlogSuccess(items)), 5000);
+                setTimeout(() => dispatch(actions.loadBlogSuccess(items)), 1000);
                 // dispatch(actions.loadBlogSuccess(items));
             })
             .catch(err => {

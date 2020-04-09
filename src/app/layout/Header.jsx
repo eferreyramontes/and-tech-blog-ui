@@ -1,5 +1,6 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
+import React from 'react';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+import AndLogo from '../../components/AndLogo';
 
 class Header extends React.Component {
 
@@ -23,20 +24,9 @@ class Header extends React.Component {
                     <NavLink
                         className="navbar-item"
                         to="/"
-                        activeClassName="is-active"
-                    >
-                        <img
-                            style={{
-                                borderTopLeftRadius: '50%',
-                                borderTopRightRadius: '50%',
-                                borderBottomLeftRadius: '50%',
-                                borderBottomRightRadius: '50%',
-                                marginRight: 15
-                            }}
-                            src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAU3AAAAJGE1MzYxNzYzLTE1NTUtNDEyYi04MzRjLTgzZjNkOGU0MGIzNg.jpg"
-                            width="30px"
-                            alt="" />
-                        <span>AND Tech Blog</span>
+                        activeClassName="is-active">
+                        <AndLogo />
+                        <span style={{ marginLeft: "10px" }}>Tech Blog</span>
                     </NavLink>
                     <button className="button navbar-burger" onClick={this.toggleNav}>
                         <span></span>
@@ -98,7 +88,7 @@ class Header extends React.Component {
                         </a>
                     </div>
                 </div>
-            </nav>
+            </nav >
         )
     }
 }
