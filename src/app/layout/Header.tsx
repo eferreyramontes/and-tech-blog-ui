@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+import { NavLink } from 'react-router-dom';
 import AndLogo from '../../components/AndLogo';
 
 class Header extends React.Component {
@@ -9,7 +9,7 @@ class Header extends React.Component {
     }
 
     toggleNav = () => {
-        this.setState(prevState => ({
+        this.setState((prevState: { isActive: boolean }) => ({
             isActive: !prevState.isActive
         }))
     }
@@ -44,29 +44,29 @@ class Header extends React.Component {
                             <span className="icon has-text-primary" style={{ marginRight: 5 }}>
                                 <i className="fas fa-code"></i>
                             </span>
-              Code Blog
-            </NavLink>
-                        <a className="navbar-item">
+                            Code Blog
+                        </NavLink>
+                        <a className="navbar-item" href="/blog">
                             <span className="icon" style={{ marginRight: 5 }}>
                                 <i className="fab fa-lg fa-medium"></i>
                             </span>
               Medium
-            </a>
+                        </a>
                         <div className="navbar-item has-dropdown is-hoverable">
-                            <a className="navbar-link" >
+                            <a className="navbar-link" href="/blog">
                                 Projects
                             </a>
                             <div className="navbar-dropdown">
-                                <a className="navbar-item">
+                                <a className="navbar-item" href="/blog">
                                     Overview
                                 </a>
                                 <hr className="navbar-divider" />
-                                <a className="navbar-item">
+                                <a className="navbar-item" href="/blog">
                                     This Site
-                </a>
-                                <a className="navbar-item" >
+                                </a>
+                                <a className="navbar-item" href="/blog">
                                     Angular The React Way
-                </a>
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
-import Site from './layout/Site'
-import Header from './layout/Header'
-import Content from './layout/Content'
-import Footer from './layout/Footer'
-import Router from './layout/Router'
+import Site from './layout/Site';
+import Header from './layout/Header';
+import Content from './layout/Content';
+import Footer from './layout/Footer';
+import Router from './layout/Router';
 
 const Layout = ({ children }) => (
     <Site>
