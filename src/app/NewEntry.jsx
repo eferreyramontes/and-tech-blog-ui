@@ -27,13 +27,13 @@ class NewEntry extends React.Component {
                     validationSchema={schemaValidation}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
+                            console.log("onSubmit");
                             alert(JSON.stringify(values, null, 2));
                             setSubmitting(false);
                         }, 400);
                     }}
                 >
                     {({ isSubmitting, errors }) => {
-                        console.log(`errors: ${JSON.stringify(errors)}`);
                         return (
                             <Form className="form">
                                 <FormField name="title" title="Title" type="text" placeholder="Article title" />
@@ -41,7 +41,7 @@ class NewEntry extends React.Component {
                                 <FormField name="status" title="Status" type="text" placeholder="Article status" />
                                 <FormField name="content" title="Content" type="textarea" placeholder="Article content" />
                                 <FormField name="tags" title="Tags" type="text" placeholder="Article tags" />
-                                <button className="button" type="submit" disabled={isSubmitting && !errors}>Submit</button>
+                                <button className="button" type="submit" disabled={isSubmitting || !(Object.keys(errors).length === 0 && errors.constructor === Object)}>Submit</button>
                             </Form>
                         )
                     }}
