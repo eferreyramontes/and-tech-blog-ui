@@ -4,6 +4,7 @@ import { Formik, Form } from 'formik';
 import PageContent from './../components/PageContent';
 import FormField from './../components/FormField';
 import * as Yup from "yup";
+import { createPost } from './../store/Blog';
 
 class NewEntry extends React.Component {
     render() {
@@ -30,6 +31,7 @@ class NewEntry extends React.Component {
                             console.log("onSubmit");
                             alert(JSON.stringify(values, null, 2));
                             setSubmitting(false);
+                            this.props.createPost(values);
                         }, 400);
                     }}
                 >
@@ -51,9 +53,10 @@ class NewEntry extends React.Component {
     }
 }
 
-function mapStateToProps(state, ownProps) {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
+        createPost: (post) => dispatch(createPost(post))
     }
 }
 
-export default connect(mapStateToProps)(NewEntry);
+export default connect(null, mapDispatchToProps)(NewEntry);

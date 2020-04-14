@@ -7,7 +7,7 @@ const client = contentful.createClient({
 })
 
 export function loadBlog() {
-    return dispatch => {
+    return (dispatch: (arg0: { type: string; isLoading?: boolean; posts?: any; }) => void) => {
         dispatch(actions.blogLoading());
         return client.getEntries()
             .then(({ items }) => {
@@ -18,5 +18,16 @@ export function loadBlog() {
                 console.log(err);
                 dispatch(actions.blogLoading(false))
             })
+    }
+}
+
+export function createPost(post: { title: String }) {
+    console.log(`createPost - post: ${JSON.stringify(post)}`);
+
+    return (dispatch: (arg0: { type: string; }) => void) => {
+        console.log(`create Post under construction. Post: ${JSON.stringify(post)}`);
+        dispatch(actions.postSending());
+
+        return setTimeout(() => dispatch(actions.sendPostSuccess()), 1000);
     }
 }

@@ -10,7 +10,7 @@ const field = (props) => {
         case 'select':
             return (
                 <Field className='select' as='select' name={props.name} placeholder={props.placeholder} >
-                    {props.options.map(element => (<option>{element}</option>))}
+                    {props.options.map(element => (<option key={element}>{element}</option>))}
                 </Field>
             );
         default:
