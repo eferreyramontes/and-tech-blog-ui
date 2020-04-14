@@ -9,7 +9,6 @@ const client = contentful.createClient({
 export function loadBlog() {
     return dispatch => {
         dispatch(actions.blogLoading());
-
         return client.getEntries()
             .then(({ items }) => {
                 setTimeout(() => dispatch(actions.loadBlogSuccess(items)), 1000);
