@@ -10,8 +10,8 @@ const field = (props) => {
         case 'select':
             return (
                 <Field className='select' as='select' name={props.name} placeholder={props.placeholder} >
-                    {props.options.map(element => (<option key={element}>{element}</option>))}
-                </Field>
+                    {props.options.map(element => (<option key={element} value={element} label={element} />))}
+                </Field >
             );
         default:
             return (<span></span>)
@@ -24,7 +24,11 @@ const FormField = (props) => {
             <label className="label">{props.title}</label>
             <div className="control">
                 {field(props)}
-                <ErrorMessage component="div" name={props.name} />
+                <ErrorMessage
+                    style={{ margin: '5px' }}
+                    className="notification is-danger is-light"
+                    component="div"
+                    name={props.name} />
             </div>
         </div>
     )

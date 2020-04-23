@@ -10,9 +10,7 @@ export function loadBlog() {
     return (dispatch: (arg0: { type: string; isLoading?: boolean; posts?: any; }) => void) => {
         dispatch(actions.blogLoading());
 
-        console.log(`Environment: ${JSON.stringify(process.env)}`);
-
-        return fetch('https://qf36yp1nje.execute-api.us-east-1.amazonaws.com/dev/list-posts')
+        return fetch('https://kdau9lg3g0.execute-api.us-east-1.amazonaws.com/dev/list-posts')
             .then(res => res.json())
             .then(json => dispatch(actions.loadBlogSuccess(json)))
             .catch(e => console.log(`There was an error consuming backend`, e));
@@ -27,16 +25,5 @@ export function loadBlog() {
         //         console.log(err);
         //         dispatch(actions.blogLoading(false))
         //     })
-    }
-}
-
-export function createPost(post: { title: String }) {
-    console.log(`createPost - post: ${JSON.stringify(post)}`);
-
-    return (dispatch: (arg0: { type: string; }) => void) => {
-        console.log(`create Post under construction. Post: ${JSON.stringify(post)}`);
-        dispatch(actions.postSending());
-
-        return setTimeout(() => dispatch(actions.sendPostSuccess()), 1000);
     }
 }

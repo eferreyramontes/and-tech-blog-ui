@@ -17,14 +17,6 @@ export default function blogReducer(state = initialState.blog, action) {
                 posts: action.posts,
                 loading: false
             }
-        case types.POST_SENDING:
-            return {
-                ...state
-            }
-        case types.POST_SENT_SUCCESSFULLY:
-            return {
-                ...state
-            }
         default:
             return state;
     }
